@@ -1,9 +1,11 @@
 ## Quick Start
-### ProGuard is integrated in Google's Android SDK. If you have an Android Gradle project you can enable ProGuard instead of the default R8 compiler:
+**ProGuard is integrated in Google's Android SDK. If you have an Android Gradle project you can enable ProGuard instead of the default R8 compiler:**
 
 **1.Disable R8 in your gradle.properties:**
-  *android.enableR8=false*
-  *android.enableR8.libraries=false*
+
+  - *android.enableR8=false*
+  - *android.enableR8.libraries=false*
+  
 **2.Override the default version of ProGuard with the most recent one in your main build.gradle:**
 
 `buildscript {
