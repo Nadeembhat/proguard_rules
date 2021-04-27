@@ -1,11 +1,12 @@
-### Quick Start
-# ProGuard is integrated in Google's Android SDK. If you have an Android Gradle project you can enable ProGuard instead of the default R8 compiler:
+## Quick Start
+### ProGuard is integrated in Google's Android SDK. If you have an Android Gradle project you can enable ProGuard instead of the default R8 compiler:
 
-# Disable R8 in your gradle.properties:
-  android.enableR8=false
-    android.enableR8.libraries=false
-Override the default version of ProGuard with the most recent one in your main build.gradle:
-buildscript {
+**1.Disable R8 in your gradle.properties:**
+  *android.enableR8=false*
+  *android.enableR8.libraries=false*
+**2.Override the default version of ProGuard with the most recent one in your main build.gradle:**
+
+`buildscript {
     //...
     configurations.all {
         resolutionStrategy {
@@ -15,8 +16,11 @@ buildscript {
         }
     }
 }
-Enable minification as usual in your build.gradle:
-android {
+`
+
+**3.Enable minification as usual in your build.gradle:**
+
+`android {
     //...
     buildTypes {
         release {
@@ -27,5 +31,6 @@ android {
         }
     }
 }
-Add any necessary configuration to your proguard-project.txt.
+`
+**4.Add any necessary configuration to your proguard-project.txt.**
 
