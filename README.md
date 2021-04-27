@@ -8,20 +8,20 @@
   
 **2.Override the default version of ProGuard with the most recent one in your main build.gradle:**
 
-$ buildscript {
-$    //...
-$    configurations.all {
-$       resolutionStrategy {
-$            dependencySubstitution {
-$                substitute module('net.sf.proguard:proguard-gradle') with module('com.guardsquare:proguard-$    gradle:7.0.1')
- $           }
- $       }
-  $  }
-$ }
-
+``` buildscript {
+    //...
+    configurations.all {
+       resolutionStrategy {
+            dependencySubstitution {
+                substitute module('net.sf.proguard:proguard-gradle') with module('com.guardsquare:proguard-$    gradle:7.0.1')
+           }
+       }
+   }
+ }
+```
 **3.Enable minification as usual in your build.gradle:**
 
-`android {
+``` android {
     //...
     buildTypes {
         release {
@@ -32,6 +32,6 @@ $ }
         }
     }
 }
-`
+```
 **4.Add any necessary configuration to your proguard-project.txt.**
 
