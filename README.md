@@ -8,7 +8,8 @@
   
 **2.Override the default version of ProGuard with the most recent one in your main build.gradle:**
 
-``` buildscript {
+``` 
+buildscript {
     //...
     configurations.all {
        resolutionStrategy {
@@ -21,7 +22,8 @@
 ```
 **3.Enable minification as usual in your build.gradle:**
 
-``` android {
+```
+android {
     //...
     buildTypes {
         release {
